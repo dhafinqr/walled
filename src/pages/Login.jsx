@@ -13,16 +13,44 @@ function Login() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const storedLogin = localStorage.getItem("login");
+    if (storedLogin) {
+      navigate("/dashboard"); // Redirect to dashboard if user is logged in
+    }
+  }, [navigate]);
+
   const handleChange = (e) => {
     setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    localStorage.setItem("login", JSON.stringify(loginForm));
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/dashboard");
+  
+    try {
+      // Fetch data pengguna dari server
+      const response = await fetch("http://localhost:3000/users");
+      const users = await response.json();
+  
+      // Cari pengguna berdasarkan email dan password
+      const user = users.find(
+        ({ email, password }) =>
+          email === loginForm.email && password === loginForm.password
+      );
+  
+      if (user) {
+        // Jika pengguna ditemukan, simpan data login di localStorage
+        localStorage.setItem("login", JSON.stringify(user));
+        navigate("/dashboard");
+      } else {
+        // Jika tidak ditemukan, tampilkan pesan error
+        alert("Email atau password salah!");
+      }
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      alert("Terjadi kesalahan saat mencoba login. Silakan coba lagi.");
+    }
   };
-
 
   return (
     <section className="flex w-full h-screen bg-white">

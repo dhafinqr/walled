@@ -5,20 +5,40 @@ import viewIcon from "../assets/view.png";
 function Hero() {
 
   const [showBalance, setShowBalance] = useState(true);
-  const [username, setUsername] = useState(true);
+  const user = JSON.parse(localStorage.getItem("login"))
+//   const [username, setUsername] = useState(true);
+//   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-        const loginObj = localStorage.getItem("login");
-        const { email } = JSON.parse(loginObj);
-        setUsername(email);
+//   useEffect(() => {
+//         const loginObj = localStorage.getItem("login");
+//         const { email } = JSON.parse(loginObj);
+//         setUsername(email);
+//     },[]);
+
+    useEffect(() => {
+        async function getData () {
+        const url = "http://localhost:3000/users";
+        try {
+            const response = await fetch(url);
+            if(!response.ok){
+                throw new Error(`Response status: ${response.status}`);
+            }
+            const json = await response.json();
+            setUsers(json);
+        }   catch (error){
+            console.error(error.message);
+        }
+    }
+    getData();
     },[]);
+
 
   return (
     <section className="w-full px-16 mt-12">
       <div className="flex items-center justify-center">
         <div className="mr-auto">
           <h1 className="text-black text-6xl font-bold">
-            {`Good Morning, ${username}!`}
+            {`Ohayou, ${user.name}-Sama!`}
           </h1>
           <p className="text-black text-2xl mt-3">
             Check all your incoming and outgoing transactions here

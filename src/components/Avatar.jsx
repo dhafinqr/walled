@@ -6,11 +6,11 @@ function Avatar() {
   const [isAvatarActive, setIsAvatarActive] = useState(false);
   const [username, setUsername] = useState(true);
 
-  useEffect(() => {
-        const loginObj = localStorage.getItem("login");
-        const { email } = JSON.parse(loginObj);
-        setUsername(email);
-    },[]);
+//   useEffect(() => {
+//         const loginObj = localStorage.getItem("login");
+//         const { email } = JSON.parse(loginObj);
+//         setUsername(email);
+//     },[]);
 
   return (
     <div className="flex items-center gap-x-4 ml-auto">

@@ -1,0 +1,111 @@
+{
+    "transactions": [
+      {
+        "id": "1",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "DEBIT",
+        "fromTo": "310001001",
+        "description": "Fore Coffee",
+        "amount": -75000.0
+      },
+      {
+        "id": "2",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "CREDIT",
+        "fromTo": "1001",
+        "description": "Topup from Bank Transfer",
+        "amount": 1000000.0
+      },
+      {
+        "id": "3",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "DEBIT",
+        "fromTo": "310001001",
+        "description": "Fore Coffee",
+        "amount": -75000.0
+      },
+      {
+        "id": "4",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "CREDIT",
+        "fromTo": "1001",
+        "description": "Topup from Bank Transfer",
+        "amount": 1000000.0
+      },
+      {
+        "id": "5",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "DEBIT",
+        "fromTo": "310001001",
+        "description": "Fore Coffee",
+        "amount": -75000.0
+      },
+      {
+        "id": "6",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "CREDIT",
+        "fromTo": "1001",
+        "description": "Topup from Bank Transfer",
+        "amount": 1000000.0
+      },
+      {
+        "id": "7",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "DEBIT",
+        "fromTo": "310001001",
+        "description": "Fore Coffee",
+        "amount": -75000.0
+      },
+      {
+        "id": "8",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "CREDIT",
+        "fromTo": "1001",
+        "description": "Topup from Bank Transfer",
+        "amount": 1000000.0
+      },
+      {
+        "id": "9",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "DEBIT",
+        "fromTo": "310001001",
+        "description": "Fore Coffee",
+        "amount": -75000.0
+      },
+      {
+        "id": "10",
+        "dateTime": "20:10 - 30 June 2022",
+        "type": "CREDIT",
+        "fromTo": "1001",
+        "description": "Topup from Bank Transfer",
+        "amount": 1000000.0
+      }
+    ],
+    "users": [
+      {
+        "id": "1",
+        "email": "aizen@gmail.com",
+        "username": "aizen",
+        "name": "Aizen",
+        "password": "aizen123",
+        "balance": 5000000
+      },
+      {
+        "id": "2",
+        "email": "sigma.boy@gmail.com",
+        "username": "sigmaboy",
+        "name": "Sigma Boy",
+        "password": "sigma123",
+        "balance": 7500000
+      },
+      {
+        "id": "3",
+        "email": "skibidi.toilet@gmail.com",
+        "username": "skibiditoilet",
+        "name": "Skibidi Toilet",
+        "password": "skibidi123",
+        "balance": 1200000
+      }
+    ]
+  }
+  

@@ -8,6 +8,8 @@ import App from "./App.jsx";
 import Transfer from "./pages/Transfer.jsx";
 import Topup from "./pages/Topup.jsx";
 import Register from "./pages/Register.jsx";
+// import PrivateLayout from "./layouts/PrivateLayout.jsx";
+// import PublicLayout from "./layouts/PublicLayout.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
